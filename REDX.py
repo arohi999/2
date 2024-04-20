@@ -504,7 +504,7 @@ def rcrack1(uid,pwx,tl):
 
             session = requests.Session()
 
-            sys.stdout.write('\r[\x1b[\033[\033[1;32mRED] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] -  \r'%(loop,tl,len(oks),len(cps))),
+            sys.stdout.write('\r[\x1b[\033[1;91mRED 🔴\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
 
             sys.stdout.flush()
 
